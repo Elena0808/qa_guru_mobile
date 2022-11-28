@@ -5,6 +5,8 @@ from appium import webdriver
 from dotenv import load_dotenv
 from selene.support.shared import browser
 
+from qa_guru_mobile.utils import attach
+
 
 @pytest.fixture(scope='function', autouse=True)
 def driver_management():
@@ -26,4 +28,5 @@ def driver_management():
     "http://hub.browserstack.com/wd/hub", options=options)
 
     yield
+    attach.add_video(browser)
     browser.quit()
