@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "qa-guru-mobile"
+version = "0.1.0"
+description = ""
+authors = ["eisaeva <hanymka@me.com>"]
+readme = "README.md"
+packages = [{include = "qa_guru_mobile"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Appium-Python-Client = "^2.6.1"
+selene = "^2.0.0-b12"
+pytest ="^7.1.3"
+python-dotenv = "^0.21.0"
+allure-pytest = "^2.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
